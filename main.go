@@ -25,7 +25,7 @@ func main() {
 		Flags: []cli.Flag{
 			cli.StringFlag{
 				Name:  "link",
-				Usage: "access link like http://localhost:5500/foo/app.html",
+				Usage: "Access link like http://localhost:5500/foo/app.html",
 			},
 		},
 		Action: Handle,
