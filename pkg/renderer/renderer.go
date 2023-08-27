@@ -16,13 +16,14 @@ import (
 	"github.com/chromedp/cdproto/emulation"
 	"github.com/chromedp/cdproto/runtime"
 	"github.com/chromedp/chromedp"
-	"github.com/kanadeishii/void/internal/bundler"
-	"github.com/kanadeishii/void/internal/counter"
-	"github.com/kanadeishii/void/internal/logger"
-	"github.com/kanadeishii/void/internal/types"
-	"github.com/kanadeishii/void/internal/utils"
+	"github.com/kanadesh/void/internal/bundler"
+	"github.com/kanadesh/void/internal/counter"
+	"github.com/kanadesh/void/internal/logger"
+	"github.com/kanadesh/void/internal/types"
+	"github.com/kanadesh/void/internal/utils"
 )
 
+// The render function
 func Render(link string, doLogging bool) error {
 	pioneer, cancel := chromedp.NewContext(
 		context.Background(),
@@ -154,7 +155,7 @@ func Render(link string, doLogging bool) error {
 							if(data.action === 'ok'){
 								resolve(null)
 							}
-						})
+				})
 						channel.postMessage({
 							action: 'load',
 							body: {

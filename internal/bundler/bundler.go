@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/kanadeishii/void/internal/logger"
-	"github.com/kanadeishii/void/internal/types"
+	"github.com/kanadesh/void/internal/logger"
+	"github.com/kanadesh/void/internal/types"
 )
 
 func Bundle(option types.Option, audios []types.Audio, doLogging bool) error {

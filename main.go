@@ -4,21 +4,23 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kanadeishii/void/internal/logger"
-	"github.com/kanadeishii/void/pkg/renderer"
+	"github.com/kanadesh/void/internal/logger"
+	"github.com/kanadesh/void/pkg/renderer"
 	"github.com/urfave/cli"
 )
 
 func Handle(context *cli.Context) {
-	link := context.String("link")
+	link := context.String("link") // Get link from params
 
+	// Put informations
 	fmt.Print("\n")
 	logger.Rich(logger.ColorBlue, "void", "requesting to "+link+"\n")
 
-	renderer.Render(link, true)
+	renderer.Render(link, true) // Render screenshots with Chromedp
 }
 
 func main() {
+	// Initialize the application
 	app := &cli.App{
 		Name:  "void",
 		Usage: "generate videos on webdev",
@@ -31,5 +33,5 @@ func main() {
 		Action: Handle,
 	}
 
-	app.Run(os.Args)
+	app.Run(os.Args) // Run the app
 }

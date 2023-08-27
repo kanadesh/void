@@ -12,7 +12,7 @@ const option = {
     height: resolution,
     cacheDir: '.cache',
     resultFile: 'video.mp4',
-    number: 8, // Number of pages to run in parallel.
+    number: 16, // Number of pages to run in parallel.
     audios: [
         {
             link: '/example/warp.mp3',

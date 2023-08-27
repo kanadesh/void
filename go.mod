@@ -1,4 +1,4 @@
-module github.com/kanadeishii/void
+module github.com/kanadesh/void
 
 go 1.20
 
